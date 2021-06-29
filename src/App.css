@@ -1,38 +1,30 @@
-.App {
-  text-align: center;
+*{margin: 0; padding: 0; box-sizing: border-box;}
+
+.MuiCardContent-root:last-child {
+    padding-bottom: 24px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.form-border{
+    padding: 25px;
+    /* border: 1px solid rgb(103, 104, 103); */
+    /* box-shadow: 5px 5px 5px grey; */
+    box-shadow: 2px 5px 15px 2px #888888;
+}
+/* h3{
+    display:flex;
+    justify-content: center;
+    padding-bottom: 10px;
+    color: rgb(191, 231, 227);
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+} */
+.account{
+    display: flex;
+    /* flex-direction: column; */
+    padding-top: 15px;
+    justify-content: flex-end;
+    cursor: pointer;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
