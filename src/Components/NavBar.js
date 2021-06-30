@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link , NavLink} from 'react-router-dom'
 import { Navbar , Nav } from 'react-bootstrap'
 
 const NavBar = () => {
@@ -29,10 +29,14 @@ const NavBar = () => {
     // </Nav>
 
     <Navbar bg="dark" variant="dark">
-    <Navbar.Brand href="/login">Navbar</Navbar.Brand>
+    <Navbar.Brand className='navbar-right' ><Link to='/login'>Navbar</Link></Navbar.Brand>
     <Nav className="ml-auto">
-      <Nav.Link href="/login" >LogIn</Nav.Link>
-      <Nav.Link href="/signup" >SignUp</Nav.Link>
+      
+    <Nav.Link className='navbar-right'><Link to='/login'>LogIn</Link></Nav.Link>
+    <Nav.Link className='navbar-right'><Link to='/signup'>SignUp</Link></Nav.Link> 
+
+      {/* <Nav.Link href="/login" >LogIn</Nav.Link>
+      <Nav.Link href="/signup" >SignUp</Nav.Link> */}
     </Nav>
     </Navbar>
 

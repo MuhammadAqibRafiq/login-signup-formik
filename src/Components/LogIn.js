@@ -4,7 +4,8 @@ import { TextField, CheckboxWithLabel } from 'formik-material-ui';
 import { Card, CardContent, Button, Box } from '@material-ui/core';
 import CircularProgress from '@material-ui/core/CircularProgress/CircularProgress';
 import Typography from '@material-ui/core/Typography';
-import Link from '@material-ui/core/Link';
+// import Link from '@material-ui/core/Link';
+import { Link } from 'react-router-dom';
 import Avatar from '@material-ui/core/Avatar';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import { makeStyles } from '@material-ui/core/styles';
@@ -28,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
   
       <Typography variant="body2" color="textSecondary" align="center">
         {'Copyright © '}
-        <Link color="inherit" href="http://aqib-rafiq.surge.sh/">
+        <Link color="inherit" to={{ pathname: "http://aqib-rafiq.surge.sh/" }} target="_blank" >
           Your Website
         </Link>{' '}
         {new Date().getFullYear()}
@@ -114,7 +115,7 @@ const LogIn = () => {
               </div>
 
               <Box className='login-account'>
-              <Link variant="body2" href="/forget" >
+              <Link variant="body2" to="/forget" >
               Forgot password?
               </Link>
               </Box>
