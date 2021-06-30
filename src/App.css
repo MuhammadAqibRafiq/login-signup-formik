@@ -1,25 +1,20 @@
 *{margin: 0; padding: 0; box-sizing: border-box;}
 
-.MuiCardContent-root:last-child {
+.signup-cardcontent {
     padding-bottom: 24px;
     justify-content: center;
     align-items: center;
     display: flex;
 }
-.form-border{
-    padding: 25px;
-    /* border: 1px solid rgb(103, 104, 103); */
-    /* box-shadow: 5px 5px 5px grey; */
-    box-shadow: 2px 5px 15px 2px #888888;
-}
-/* h3{
+
+.signup-title{
     display:flex;
     justify-content: center;
     padding-bottom: 10px;
-    color: rgb(191, 231, 227);
+    color: rgb(83, 173, 233);
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-} */
-.account{
+}
+.signup-account{
     display: flex;
     /* flex-direction: column; */
     padding-top: 15px;
@@ -27,4 +22,65 @@
     cursor: pointer;
 }
 
+                /* Login form */
+                
+.login-main{
+    background-color: rgb(85, 85, 128);
+}
+.login-bg img{
+    width: 100vw;
+    height: 90vh;
 
+}
+.login-cards {
+    /* display: flex; */
+   /* flex-direction: row; */
+   /* justify-content: flex-end; */
+   /* background-color: blue; */
+ }
+
+.login-form-border{
+    padding: 60px;
+    /* border: 1px solid rgb(103, 104, 103); */
+    /* box-shadow: 5px 5px 5px grey; */
+    box-shadow: 2px 5px 15px 2px #000000;
+    background-color: white;
+    /* display: flex;
+    justify-content: flex-end;
+    align-items: center; */
+}
+.login-cardcontent{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-image: url("https://source.unsplash.com/random") ;
+    background-repeat: no-repeat;
+    height: 600px;
+    background-size:1380px 600px;
+}
+.login-account{
+    display: flex;
+    padding-top: 15px;
+    justify-content: center;
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 600px) {
+    .login-cardcontent{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+         background-size: cover;
+    }
+  }
+
+  /* @media screen and (max-width: 300px) {
+    .login-cardcontent{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+         background-size: cover;
+         height: 600px;
+    }
+  } */

@@ -8,7 +8,7 @@ import Link from '@material-ui/core/Link';
 import Avatar from '@material-ui/core/Avatar';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import { makeStyles } from '@material-ui/core/styles';
-// import { Link } from 'react-router-dom'
+import LockOpenIcon from '@material-ui/icons/LockOpen';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
   },
   avatar: {
     margin: theme.spacing(1),
-    backgroundColor: theme.palette.secondary.main,
+    backgroundColor: theme.palette.error.main,
   },
 }));
 
@@ -45,7 +45,7 @@ const SignUp = () => {
 
 return(
 
-  <div>
+  <div className='signup-main'>
     <Formik
       initialValues={{ firstname: '', lastname: '', email: '', password: '', checkbox: false }}
       validate={values => {
@@ -68,7 +68,7 @@ return(
         }
         return errors;
       }}
-      onSubmit={(values, { setSubmitting , Button}) => {
+      onSubmit={(values, { setSubmitting }) => {
         setTimeout(() => {
           
           alert(JSON.stringify(values, null, 2));
@@ -81,15 +81,15 @@ return(
 
 
         <Card>
-          <CardContent>
-            <Form className='form-border'>
+          <CardContent className='signup-cardcontent'>
+            <Form className='Signup-form-border'>
 
               <div className={classes.paper} >
                 <Avatar className={classes.avatar}>
-                  <LockOutlinedIcon />
+                  <LockOpenIcon />
                 </Avatar>
 
-                <h3>SignUp Form</h3>
+                <h3 className='signup-title'>SignUp</h3>
                 </div>
 
               <Box>
@@ -120,7 +120,7 @@ return(
               </Button>
               </div>
 
-              <Box className='account'>
+              <Box className='signup-account'>
               <Link variant="body2" href="/login" >
                Already have an account? Sign in
               </Link>
