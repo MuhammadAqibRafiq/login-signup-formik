@@ -29,7 +29,7 @@ const NavBar = () => {
     // </Nav>
 
     <Navbar bg="dark" variant="dark">
-    <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+    <Navbar.Brand href="/login">Navbar</Navbar.Brand>
     <Nav className="ml-auto">
       <Nav.Link href="/login" >LogIn</Nav.Link>
       <Nav.Link href="/signup" >SignUp</Nav.Link>

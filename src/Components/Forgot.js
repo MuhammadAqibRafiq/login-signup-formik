@@ -8,6 +8,9 @@ import Link from '@material-ui/core/Link';
 import Avatar from '@material-ui/core/Avatar';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import { makeStyles } from '@material-ui/core/styles';
+import { FormatAlignLeftOutlined } from '@material-ui/icons';
+import { green, purple } from '@material-ui/core/colors';
+// import { createMuiTheme, withStyles, makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
     paper: {
@@ -17,10 +20,13 @@ const useStyles = makeStyles((theme) => ({
     },
     avatar: {
       margin: theme.spacing(1),
-      backgroundColor: theme.palette.secondary.main,
+      backgroundColor: theme.palette.warning.main,
     },
+    palette: {
+        backgroundColor: theme.palette.success.main,
+      },
   }));
-  
+
   
   function Copyright() {
   
@@ -38,7 +44,7 @@ const useStyles = makeStyles((theme) => ({
   }
 
 
-const LogIn = () => {
+const Forgot = () => {
 
   const classes=useStyles();
 
@@ -47,7 +53,7 @@ const LogIn = () => {
         <div className='login-main'>
            
     <Formik
-      initialValues={{  email: '', password: '', checkbox: false }}
+      initialValues={{  email: ''}}
       validate={values => {
         const errors = {};
         
@@ -58,9 +64,7 @@ const LogIn = () => {
         ) {
           errors.email = 'Invalid email address';
         }
-        if (!values.password) {
-          errors.password = 'Required';
-        }
+        
         return errors;
       }}
       onSubmit={(values, { setSubmitting }) => {
@@ -88,34 +92,32 @@ const LogIn = () => {
                   <LockOutlinedIcon />
                 </Avatar>
 
-                <h3>SignIn</h3>
+                <h3>Forget ? Oh!</h3>
                 </div>
 
               <Box>
                 <Field type="email" name="email" label='Email Address*' component={TextField} />
               </Box>
 
-              <Box>
-                <Field type="password" name="password" label='Password*' component={TextField} />
+
+              <Box className='forget-account'>
+              Forgot password?      
               </Box>
 
               <br />
 
-              <Box>
-                <Field name='checkbox' type="checkbox" component={CheckboxWithLabel} 
-                Label={{ label: 'Remenber me.' }} />
-              </Box>
 
-              <div className={classes.paper} >
-              <Button type="submit" variant="contained" color='primary' disabled={isSubmitting }
+              <div className={classes.paper}  >
+              <Button type="submit" variant="contained" className={classes.palette} disabled={isSubmitting }
                 startIcon= { isSubmitting ? <CircularProgress size="1rem" /> : null }>
                 Submit
               </Button>
+               
               </div>
 
               <Box className='login-account'>
-              <Link variant="body2" href="/forget" >
-              Forgot password?
+              <Link variant="body2" href="/login" >
+              &lt; Back To Login
               </Link>
               </Box>
       
@@ -134,5 +136,4 @@ const LogIn = () => {
         </div>
     )
 }
-
-export default LogIn
+export default Forgot;
